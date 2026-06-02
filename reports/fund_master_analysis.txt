@@ -1,0 +1,34 @@
+FUND MASTER ANALYSIS
+
+Dataset Source:
+AMFI NAVAll.txt
+
+Total Records:
+15484
+
+Total Columns:
+6
+
+Columns Identified:
+1. Scheme Code
+2. ISIN Div Payout / ISIN Growth
+3. ISIN Div Reinvestment
+4. Scheme Name
+5. Net Asset Value
+6. Date
+
+Key Findings:
+- Scheme Code uniquely identifies mutual fund schemes.
+- Scheme Name contains the mutual fund scheme details.
+- Net Asset Value represents the latest NAV.
+- Date represents the latest NAV reporting date.
+- ISIN fields identify the associated securities.
+
+Limitations:
+- Fund House information not available.
+- Category information not available.
+- Sub-category information not available.
+- Risk grade information not available.
+
+Conclusion:
+The available AMFI dataset provides scheme-level information and latest NAV details. Additional metadata sources are required to analyse fund houses, categories, sub-categories, and risk grades.

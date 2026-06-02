@@ -1,0 +1,86 @@
+DAY 1 - DATA QUALITY REPORT
+
+Project: Mutual Fund Analytics Capstone
+Date: 02-Jun-2026
+
+Datasets Analysed:
+1. fund_master.csv
+2. hdfc_top100_nav.csv
+3. sbi_bluechip.csv
+4. icici_bluechip.csv
+5. nippon_largecap.csv
+6. axis_bluechip.csv
+7. kotak_bluechip.csv
+8. nav_history.csv
+
+--------------------------------------------------
+FUND MASTER DATASET
+--------------------------------------------------
+
+Shape:
+15484 rows × 6 columns
+
+Columns:
+- Scheme Code
+- ISIN Div Payout / ISIN Growth
+- ISIN Div Reinvestment
+- Scheme Name
+- Net Asset Value
+- Date
+
+Missing Values:
+- Scheme Code: 0
+- ISIN Div Payout / ISIN Growth: 1114
+- ISIN Div Reinvestment: 1114
+- Scheme Name: 1114
+- Net Asset Value: 1114
+- Date: 1114
+
+Duplicate Rows:
+1013
+
+Observations:
+- Scheme Code has no missing values.
+- Missing values appear primarily in metadata and NAV-related fields.
+- Duplicate records are present and should be investigated during data cleaning.
+- Date column is stored as text and should be converted to datetime format.
+- NAV values should be converted to numeric datatype for analysis.
+
+--------------------------------------------------
+NAV HISTORY DATASET
+--------------------------------------------------
+
+Shape:
+19798 rows × 3 columns
+
+Observations:
+- Historical NAV records successfully combined from all downloaded schemes.
+- Dataset contains date and NAV history information.
+- Suitable for performance and trend analysis.
+
+--------------------------------------------------
+OVERALL DATA QUALITY SUMMARY
+--------------------------------------------------
+
+Strengths:
+- Data successfully ingested from MFAPI and AMFI sources.
+- Historical NAV data available.
+- Scheme codes available for identification.
+- Data files generated successfully.
+
+Issues Found:
+- 1114 missing values in multiple columns of fund_master.csv.
+- 1013 duplicate rows detected in fund_master.csv.
+- Date fields require standardisation.
+- Some fields require datatype conversion before analysis.
+
+Recommendations:
+1. Remove duplicate records.
+2. Handle missing values appropriately.
+3. Convert Date column to datetime format.
+4. Convert NAV column to numeric format.
+5. Perform additional validation before dashboard development.
+
+Status:
+Data ingestion completed successfully.
+Dataset ready for cleaning and exploratory analysis.
